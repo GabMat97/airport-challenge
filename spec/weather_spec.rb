@@ -16,4 +16,14 @@ describe Weather do
      allow(subject).to receive(:forecast).and_return(Weather::STORMY)
      expect(subject.forecast).to eq(Weather::STORMY)
    end
+
+   it "should return true if weather is sunny" do
+     weather = Weather::SUNNY
+     expect(subject.is_sunny?(weather)).to eq true
+   end
+
+   it "should return false if weather is stormy" do
+     weather = Weather::STORMY
+     expect(subject.is_sunny?(weather)).to eq false
+   end
 end

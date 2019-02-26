@@ -4,4 +4,12 @@ class Weather
   def forecast
     weather = rand(1..2)
   end
+
+  def is_sunny?(weather)
+    if weather == SUNNY
+      true
+    else
+      false
+    end
+  end
 end
