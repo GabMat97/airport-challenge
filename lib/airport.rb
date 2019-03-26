@@ -14,4 +14,8 @@ class Airport
       "You can land"
     end
   end
+
+  def land(plane)
+    fail "The weather is too rough to land" if weather == STORMY
+  end
 end
